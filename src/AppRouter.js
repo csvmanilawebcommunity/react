@@ -16,7 +16,7 @@ import Layout from './components/Common/Layout';
 const AppRouter = () => {
     return (
         <div>
-            <BrowserRouter>
+            <BrowserRouter basename={'react-playground-app'}>
                 <Layout>
                 <Switch>
                     <Route exact path="/" component={Home} />
