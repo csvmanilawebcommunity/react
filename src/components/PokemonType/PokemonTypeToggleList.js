@@ -8,8 +8,8 @@ const PokemonTypeToggleList = (props) => {
   return (
     <div className="type-box-selection-group">
     {props.types.map((type, index) => 
-            <PokemonTypeToggleButton key={index} controlId={type.name} typeName={type.name} handleClick={props.handleTypeClick} checked={checkedValue}/>
-        )}
+        <PokemonTypeToggleButton key={index} controlId={type.name} typeName={type.name} handleClick={props.handleTypeClick} checked={checkedValue}/>
+      )}
     </div>
   );
 };

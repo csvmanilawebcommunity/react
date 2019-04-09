@@ -8,6 +8,7 @@ class PokemonStatHex extends Component {
         this.updateValues();
     }
     updateValues() {
+        // TODO: Commented code are left for research purposes on how to update less/css values
         // console.log("2", Styles);
         // Less.sheets = [Styles];
         // console.log("Less.sheets2", Less.sheets);

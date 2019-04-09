@@ -1,4 +1,4 @@
-import { GET_POKEMON_LIST, GET_POKEMON, BASIC_SEARCH, ADVANCED_SEARCH , GET_TYPES, RESET, SORT_POKEMON} from "../actions/constants";
+import { GET_POKEMON } from "../actions/constants";
 
 export default function(state = null, action) {
     switch(action.type) {

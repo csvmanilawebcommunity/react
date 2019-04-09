@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './Home.css';
 import { NavLink } from 'react-router-dom';
 import ReactPlayer from 'react-player';

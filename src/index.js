@@ -9,9 +9,8 @@ import rootReducer from './reducers/index';
 import './fontAwesomeRegistry';
 
 import AppRouter from './AppRouter';
+// TODO: Need to recheck why this was commented out
 // import 'bootstrap/dist/css/bootstrap.min.css';
-// import NewItem from './components/newItem';
-import Layout from './components/Common/Layout';
 
 let createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 let storeWithMiddleware = createStoreWithMiddleware(rootReducer);

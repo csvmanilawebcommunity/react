@@ -24,7 +24,6 @@
     cursor: default;
 }
 
-
 .pokemon-details {
     display: inline-block;
     margin-top: 100px;
@@ -33,12 +32,9 @@
 
 .pbj-pokemon-bio {
     position: relative;
-    /* background-color: #ffffffaa; */
     background-color: lightblue;
     border: 5px solid #ffffff55 !important;
     display: flex;
-    /* flex-wrap: wrap; */
-    /* margin: 0 10%; */
     height: 567px;
     width: 1000px !important;
     border-radius: 20px;
@@ -82,12 +78,4 @@
     width: 60%;
     border: 3px solid #73AD21;
     padding: 10px;
-  }
-
-/* .player {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  } */
+}

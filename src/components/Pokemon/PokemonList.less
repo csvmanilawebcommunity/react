@@ -4,12 +4,8 @@
 .pbj-pokemon-list {
     display: flex;
     flex-wrap: wrap;
-    // background-color: darkslategrey;
     justify-content: center;
     clear: left;
-    // -ms-transform: scale(0.5,0.5); /* IE 9 */
-    // -webkit-transform: scale(0.5,0.5); /* Safari */
-    // transform: scale(0.5,0.5); /* Standard syntax */
   }
   
   .pbj-pokemon-list > div {
@@ -20,7 +16,6 @@
 
 .pbj-pokemon-card {
     text-align: left;
-    // background-color: red;
     border: 5px solid #EEE;
     width: @card-width;
     min-width: @card-width;
@@ -50,7 +45,6 @@
   
   .pbj-pokemon-card .type-2 {
     position:absolute;
-    // background-color: red;
     top: 85px;
     left: 0px;
     width: 170%;
@@ -141,7 +135,7 @@
       transform: rotate(-90deg);
     }
     
-  
+  /* Type Colors */
   .pbj-pokemon-card .type-1, .pbj-pokemon-card .type-2,
   .pbj-pokemon-card .type-1.unknown, .pbj-pokemon-card .type-2.unknown {
     background-color: #68A090;
@@ -169,152 +163,134 @@
   .pbj-pokemon-card .type-1.shadow, .pbj-pokemon-card .type-2.shadow { background-color: #555555; }
 
 
+/* START - Card Hover Annimation */
+.pbj-pokemon-card:hover img {
+  animation: shake 150ms 2 linear;
+  -moz-animation: shake 150ms 2 linear;
+  -webkit-animation: shake 150ms 2 linear;
+  -o-animation: shake 150ms 2 linear;
+}
 
-
-
-
-
-  .pbj-pokemon-card:hover img {
-    animation: shake 150ms 2 linear;
-    -moz-animation: shake 150ms 2 linear;
-    -webkit-animation: shake 150ms 2 linear;
-    -o-animation: shake 150ms 2 linear;
+/* START - Shake Annimation */
+@keyframes shake {
+  0% {
+    transform: translate(3px, 0);
   }
+  50% {
+    transform: translate(-3px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 
+@-moz-keyframes shake {
+  0% {
+    -moz-transform: translate(3px, 0);
+  }
+  50% {
+    -moz-transform: translate(-3px, 0);
+  }
+  100% {
+    -moz-transform: translate(0, 0);
+  }
+}
 
-		/**
-		 **		Shake Annimation Starts Here.
-		 **/
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(3px, 0);
+  }
+  50% {
+    -webkit-transform: translate(-3px, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+  }
+}
 
-		@keyframes shake {
-		  0% {
-		    transform: translate(3px, 0);
-		  }
-		  50% {
-		    transform: translate(-3px, 0);
-		  }
-		  100% {
-		    transform: translate(0, 0);
-		  }
-		}
+@-ms-keyframes shake {
+  0% {
+    -ms-transform: translate(3px, 0);
+  }
+  50% {
+    -ms-transform: translate(-3px, 0);
+  }
+  100% {
+    -ms-transform: translate(0, 0);
+  }
+}
 
-		@-moz-keyframes shake {
-		  0% {
-		    -moz-transform: translate(3px, 0);
-		  }
-		  50% {
-		    -moz-transform: translate(-3px, 0);
-		  }
-		  100% {
-		    -moz-transform: translate(0, 0);
-		  }
-		}
+@-o-keyframes shake {
+  0% {
+    -o-transform: translate(3px, 0);
+  }
+  50% {
+    -o-transform: translate(-3px, 0);
+  }
+  100% {
+    -o-transform: translate(0, 0);
+  }
+}
+/* END - Shake Annimation */
 
-		@-webkit-keyframes shake {
-		  0% {
-		    -webkit-transform: translate(3px, 0);
-		  }
-		  50% {
-		    -webkit-transform: translate(-3px, 0);
-		  }
-		  100% {
-		    -webkit-transform: translate(0, 0);
-		  }
-		}
+/* START - Hop Annimation */
+@keyframes hop {
+  0% {
+    transform: translate(0, 3px);
+  }
+  50% {
+    transform: translate(-0, 3px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 
-		@-ms-keyframes shake {
-		  0% {
-		    -ms-transform: translate(3px, 0);
-		  }
-		  50% {
-		    -ms-transform: translate(-3px, 0);
-		  }
-		  100% {
-		    -ms-transform: translate(0, 0);
-		  }
-		}
+@-moz-keyframes hop {
+  0% {
+    -moz-transform: translate(0, 3px);
+  }
+  50% {
+    -moz-transform: translate(-0, 3px);
+  }
+  100% {
+    -moz-transform: translate(0, 0);
+  }
+}
 
-		@-o-keyframes shake {
-		  0% {
-		    -o-transform: translate(3px, 0);
-		  }
-		  50% {
-		    -o-transform: translate(-3px, 0);
-		  }
-		  100% {
-		    -o-transform: translate(0, 0);
-		  }
-		}
+@-webkit-keyframes hop {
+  0% {
+    -webkit-transform: translate(0, 3px);
+  }
+  50% {
+    -webkit-transform: translate(-0, 3px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+  }
+}
 
-		/**
-		 **		Shake Annimation Ends Here.
-		 **/
+@-ms-keyframes hop {
+  0% {
+    -ms-transform: translate(0, 3px);
+  }
+  50% {
+    -ms-transform: translate(-0, 3px);
+  }
+  100% {
+    -ms-transform: translate(0, 0);
+  }
+}
 
-
-     		/**
-		 **		Hop Annimation Starts Here.
-		 **/
-
-		@keyframes hop {
-		  0% {
-		    transform: translate(0, 3px);
-		  }
-		  50% {
-		    transform: translate(-0, 3px);
-		  }
-		  100% {
-		    transform: translate(0, 0);
-		  }
-		}
-
-		@-moz-keyframes hop {
-		  0% {
-		    -moz-transform: translate(0, 3px);
-		  }
-		  50% {
-		    -moz-transform: translate(-0, 3px);
-		  }
-		  100% {
-		    -moz-transform: translate(0, 0);
-		  }
-		}
-
-		@-webkit-keyframes hop {
-		  0% {
-		    -webkit-transform: translate(0, 3px);
-		  }
-		  50% {
-		    -webkit-transform: translate(-0, 3px);
-		  }
-		  100% {
-		    -webkit-transform: translate(0, 0);
-		  }
-		}
-
-		@-ms-keyframes hop {
-		  0% {
-		    -ms-transform: translate(0, 3px);
-		  }
-		  50% {
-		    -ms-transform: translate(-0, 3px);
-		  }
-		  100% {
-		    -ms-transform: translate(0, 0);
-		  }
-		}
-
-		@-o-keyframes hop {
-		  0% {
-		    -o-transform: translate(0, 3px);
-		  }
-		  50% {
-		    -o-transform: translate(-0, 3px);
-		  }
-		  100% {
-		    -o-transform: translate(0, 0);
-		  }
-		}
-
-		/**
-		 **		Shake Annimation Ends Here.
-		 **/
+@-o-keyframes hop {
+  0% {
+    -o-transform: translate(0, 3px);
+  }
+  50% {
+    -o-transform: translate(-0, 3px);
+  }
+  100% {
+    -o-transform: translate(0, 0);
+  }
+}
+/* END - Hop Annimation */

@@ -1,14 +1,17 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import BasicSearch from './BasicSearch';
-import AdvancedSearch from './AdvancedSearch';
 import {bindActionCreators} from 'redux';
-
 import {connect} from 'react-redux';
-import {basicSearch, advancedSearch, getPokemonTypes, getPokemonList, getAbilities,sort} from '../../actions/indexActions';
+import PropTypes from 'prop-types';
 
+// Assets
 import './Search.css';
 
+// Redux Setup
+import {basicSearch, advancedSearch, getPokemonTypes, getPokemonList, getAbilities,sort} from '../../actions/indexActions';
+
+// Components
+import BasicSearch from './BasicSearch';
+import AdvancedSearch from './AdvancedSearch';
 
 class Search extends Component {
   constructor() {
@@ -20,57 +23,46 @@ class Search extends Component {
     this.selectedSortOrder = "";
     this.sortOrders = ["Lowest to Highest ID", "Highest to Lowest ID", "A-Z", "Z-A"];
     this.state = {
-        isAdvancedSearch: false,
-        searchText: "",
-        showResultsCount: false
-    }; 
-}
+            isAdvancedSearch: false,
+            searchText: "",
+            showResultsCount: false
+        }; 
+    }
     componentWillMount() {
         this.props.getPokemonTypes();
         this.props.getAbilities();
     }
-
-
-    onSearchTextChange(searchText)
-    {
+    onSearchTextChange(searchText) {
         // debugger;
         this.setState({searchText: searchText});
     }
-    sortHandler(event)
-    {
+    sortHandler(event) {
         this.selectedSortOrder = event.target.value;
         this.props.sort(this.selectedSortOrder);
     }
-
-  basicSearchHandler()
-  {
+    basicSearchHandler() {
       this.props.resetPokemonList();
       this.props.basicSearch(this.state.searchText);
       this.props.sort(this.selectedSortOrder);
       this.setState({showResultsCount: true});
-  }
-
-  advancedSearchHandler(selectedPokemonTypes, selectedAbility)
-  {
+    }
+    advancedSearchHandler(selectedPokemonTypes, selectedAbility) {
       this.props.resetPokemonList();
       this.props.advancedSearch(this.state.searchText, selectedAbility, selectedPokemonTypes);
       this.props.sort(this.selectedSortOrder);
-  } 
-
- showHideAdvancedSearch()
- {
-     this.setState({isAdvancedSearch: !this.state.isAdvancedSearch});
- }
- clear() {
-    // debugger;
-    this.setState({searchText: ""});
-    this.props.resetPokemonList();
-    this.props.basicSearch("");
-    this.props.sort(this.selectedSortOrder);
-    this.setState({showResultsCount: false});
- }
-
-  render() {
+    }
+    showHideAdvancedSearch() {
+        this.setState({isAdvancedSearch: !this.state.isAdvancedSearch});
+    }
+    clear() {
+        // debugger;
+        this.setState({searchText: ""});
+        this.props.resetPokemonList();
+        this.props.basicSearch("");
+        this.props.sort(this.selectedSortOrder);
+        this.setState({showResultsCount: false});
+    }
+    render() {
         if(!this.props.pokemonTypes) {
             return <div>Still loading!</div>;
         }
@@ -101,7 +93,7 @@ class Search extends Component {
                 { this.state.isAdvancedSearch && 
                     <AdvancedSearch  searchHandler={this.advancedSearchHandler} pokemonTypes={this.props.pokemonTypes} pokemonAbilities={this.props.pokemonAbilities} clear={this.clear}/> }
             </div>
-            );
+        );
     }
 
 }
@@ -130,4 +122,3 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);
-
