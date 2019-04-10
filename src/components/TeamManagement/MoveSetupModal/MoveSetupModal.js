@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './MoveSetupModal.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+// Assets
+import './MoveSetupModal.css';
 import { bgImage } from '../../../assets/images/backgrounds/bg-training-ground.jpg';
 
 class MoveSetupModal extends Component {

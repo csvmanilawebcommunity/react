@@ -6,8 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // Components
 import {DropdownButton, MenuItem} from 'react-bootstrap';
 
-const BUTTONS = ['Default', 'Primary', 'Success', 'Info', 'Warning', 'Danger'];
-
 const MiniDropdownMenu = (props) => {
   return (
     <div className="dropdown-button">

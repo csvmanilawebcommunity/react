@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import './Home.css';
-import { NavLink } from 'react-router-dom';
 import ReactPlayer from 'react-player';
+import { NavLink } from 'react-router-dom';
+
+// Assets
+import './Home.css';
 import BGM from "../../assets/music/03 Title Screen.mp3";
 import {BGM_VOLUME} from "../../constants/MEDIA_SETTINGS";
 

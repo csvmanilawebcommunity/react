@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+// Assets
 import './PokemonType.css';
+
+// Components
 import PokemonTypeToggleButton from './PokemonTypeToggleButton';
 
 const PokemonTypeToggleList = (props) => {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import * as Styles from './PokemonStatHex.less';
 import Less from 'less';
 
 class PokemonStatHex extends Component {

@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+
+// Assets
 import './PokemonList.less';
+
+// Components
 import PokemonListItem from './PokemonListItem';
 
 export default class PokemonList extends Component {
