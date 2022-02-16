@@ -5,7 +5,6 @@ import pokemonTypesReducer from './pokemonTypesReducer';
 import pokemonCriesReducer from './pokemonCriesReducer';
 import pokemonAbilitiesReducer from './pokemonAbilitiesReducer';
 import myTeamReducer from './myTeamReducer';
-import {reducer as formReducer} from 'redux-form';
 
 const rootReducer = combineReducers({
     pokemonList: pokemonReducer,

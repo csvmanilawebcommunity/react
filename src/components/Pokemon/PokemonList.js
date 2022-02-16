@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
+
+// Assets
 import './PokemonList.less';
+
+// Components
 import PokemonListItem from './PokemonListItem';
-import PokemonDetails from '../PokemonDetails/PokemonDetails';
 
 export default class PokemonList extends Component {
     render() {
@@ -17,11 +19,6 @@ export default class PokemonList extends Component {
                     <PokemonListItem
                         key={index}
                         pokemon={pokemon}
-                        // name={pokemon.name}
-                        // imgUrl={pokemon.imgUrl}
-                        // displayId={pokemon.displayId}
-                        // type1={pokemon.type1}
-                        // type2={pokemon.type2}
                         pokemonSelectHandler={this.props.pokemonSelectHandler}
                         />
                     )}

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
-const PokemonListItem = props => {
 
+const PokemonListItem = props => {
     return (
         <NavLink exact to={`pokedex/${props.pokemon.id}`}>
             <div className="pbj-pokemon-card" onClick={(pokemon) => props.pokemonSelectHandler(props.pokemon)}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './PokemonAbilities.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './PokemonAbilities.css';
 
 const PokemonAbilities = (props) => {
   return (

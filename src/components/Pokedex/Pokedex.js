@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Redirect, NavLink } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
+// Assets
 import './Pokedex.css';
 import PokedexImg from '../../assets/images/pokedex/PokedexOpen.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

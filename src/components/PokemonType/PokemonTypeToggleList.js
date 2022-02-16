@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+// Assets
 import './PokemonType.css';
+
+// Components
 import PokemonTypeToggleButton from './PokemonTypeToggleButton';
 
 const PokemonTypeToggleList = (props) => {
@@ -8,8 +12,8 @@ const PokemonTypeToggleList = (props) => {
   return (
     <div className="type-box-selection-group">
     {props.types.map((type, index) => 
-            <PokemonTypeToggleButton key={index} controlId={type.name} typeName={type.name} handleClick={props.handleTypeClick} checked={checkedValue}/>
-        )}
+        <PokemonTypeToggleButton key={index} controlId={type.name} typeName={type.name} handleClick={props.handleTypeClick} checked={checkedValue}/>
+      )}
     </div>
   );
 };

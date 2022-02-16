@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+import ReactPlayer from 'react-player';
 import PropTypes from 'prop-types';
 import './TeamManagementPage.less';
 import RosterCard from './RosterCard';
+
+// Redux
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {getMyTeam, removeFromMyTeam} from '../../actions/indexActions';
-import ReactPlayer from 'react-player';
+
+// Assets
 import BGM from "../../assets/music/25 Pokémon Gym.mp3";
 import {BGM_VOLUME} from "../../constants/MEDIA_SETTINGS";
+
+// Components
 import MoveSetupModal from './MoveSetupModal/MoveSetupModal';
 
 class TeamManagementPage extends Component {
@@ -21,18 +27,15 @@ class TeamManagementPage extends Component {
             showModal: false,
             selectedRoster: null
         };
-     }
-
+    }
     componentWillMount() {
         this.props.getMyTeam();
     }
-
     removeHandler(roster)
     {
         this.props.removeFromMyTeam(roster);
         window.responsiveVoice.speak(`${roster.pokemon.name} has left the team.`);
     }
-
     showModalHandler(roster){
         this.setState({
             showModal: true,
@@ -50,7 +53,6 @@ class TeamManagementPage extends Component {
         roster.moves = selectedMoves;
         this.setState({selectedRoster: roster});
     }
-    
     render() {
         if(!this.props.myTeam){
             return <div>Still loading</div>;

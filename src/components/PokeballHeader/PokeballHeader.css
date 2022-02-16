@@ -19,7 +19,6 @@
 .pokeball-header > .top {
     position: relative;
     background-color: #ee1515;
-    /* border-bottom: 2px solid black; */
     min-height: 20px;
     min-width: 100%;
 }
@@ -53,7 +52,6 @@
   }
 
 .pokeball-header > .contents {
-    /* display: none; */
     max-height: 0;
     background-color: #333;
     border-color: black;
@@ -65,7 +63,6 @@
     transition: all .5s ease;
 }
 .pokeball-header:hover > .contents {
-    /* display: block; */
     max-height: 100px;
 }
 
@@ -105,15 +102,8 @@
         display: none;
     }
 }
-/* 
-.pokeball-header > .contents::after {
-    background-image:url(https://twimg0-a.akamaihd.net/a/1350072692/t1/img/front_page/jp-mountain@2x.jpg);
-    background-size: cover;
-    background-attachment:fixed;
-} */
 
 .pokeball-header > .bottom {
-    /* border-top: 2px solid black; */
     position: relative;
     background-color: white;
     min-height: 20px;

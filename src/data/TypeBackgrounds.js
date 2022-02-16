@@ -1,3 +1,4 @@
+// TODO: Add Images for the commented types
 import Bug from '../assets/images/typeBackgrounds/Type_Background_Bug.png';
 import Dark from '../assets/images/typeBackgrounds/Type_Background_Dark.png';
 import Dragon from '../assets/images/typeBackgrounds/Type_Background_Dragon.png';

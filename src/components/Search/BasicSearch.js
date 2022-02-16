@@ -43,7 +43,7 @@ class BasicSearch extends Component {
                 </div>
                 }
             </div>
-            );
+        );
     }
 }
 

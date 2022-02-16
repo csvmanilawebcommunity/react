@@ -2,11 +2,10 @@
 
 // Node Dependencies
 import React from 'react';
-import { BrowserRouter, Router, Route, Switch, IndexRoute } from 'react-router-dom';
-import { ModalContainer, ModalRoute } from 'react-router-modal';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { ModalContainer } from 'react-router-modal';
 
 // Page Dependencies
-import PokemonDetails from './components/PokemonDetails/PokemonDetails';
 import TeamManagementPage from './components/TeamManagement/TeamManagementPage';
 import Home from './components/Home/Home';
 import App from './App';
@@ -21,7 +20,6 @@ const AppRouter = () => {
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/pokedex" component={App} />
-                    {/* <Route path="/pokemon/:id" component={PokemonDetails} /> */}
                     <Route path="/myteam" component={TeamManagementPage} />
                 </Switch>
                 </Layout>

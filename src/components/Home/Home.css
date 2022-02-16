@@ -28,13 +28,11 @@
   
   .menu-card img.pokedex {
     position: absolute;
-    /* left: -328px; */
     left: -415px;
     height:100%;
   }
   .menu-card img.team-builder {
     position: absolute;
-    /* left: -328px; */
     left: -120px;
     height:100%;
     -webkit-transform: scaleX(-1);

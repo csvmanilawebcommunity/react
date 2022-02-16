@@ -1,19 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {DropdownButton, MenuItem} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const BUTTONS = ['Default', 'Primary', 'Success', 'Info', 'Warning', 'Danger'];
+// Components
+import {DropdownButton, MenuItem} from 'react-bootstrap';
 
 const MiniDropdownMenu = (props) => {
   return (
     <div className="dropdown-button">
       <DropdownButton
-        // bsStyle="default"
         title=""
-        // key={i}
-        // id={`dropdown-basic-${i}`}
         id="1"
         pullRight
       >

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
+// Components
 import PokemonDualTypeDisplayer from '../PokemonType/PokemonDualTypeDisplayer';
 import MiniDropdownMenu from './MiniDropdownMenu';
 
@@ -21,7 +23,6 @@ class RosterCard extends Component {
                     editMovesHandler={this.props.showModalHandler}
                     />
                     <img src={this.props.roster.pokemon.imgUrl} alt={this.props.roster.pokemon.name} />
-                    {/* <span className="number">#{this.props.roster.pokemon.displayId}</span> */}
                     <div className="meta">
                         <span className="name">{this.props.roster.pokemon.name}</span>
                         <PokemonDualTypeDisplayer
@@ -35,7 +36,6 @@ class RosterCard extends Component {
                     <div className="move-list">
                         { this.props.roster.moves.map((move, index) => 
                             <div className="skill" key={"skills-" + index}>
-                                {/* <div className="name">Move {index + 1}</div> */}
                                 {
                                     move && 
                                         <div>{move}</div>
@@ -47,10 +47,6 @@ class RosterCard extends Component {
                     <div className="skill">
                         <div>Reproduce</div>
                     </div>
-                     
-                     {/* <button className="btn btn-success" onClick={() => this.props.showModalHandler(this.props.roster)}>Set Moves</button>
-                     <button className="btn btn-danger" onClick={() => this.props.removeHandler(this.props.roster)}>Remove from my Team</button> */}
-
                 </div>
                 </div>
             </div>

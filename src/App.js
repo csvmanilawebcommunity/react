@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ModalContainer, ModalRoute } from 'react-router-modal';
-import logo from './logo.svg';
-import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.css';
-import PokemonList from './components/Pokemon/PokemonList';
-import PokemonDetails from './components/PokemonDetails/PokemonDetails';
-import Search  from './components/Search/Search';
-import Banner from './components/Banner';
-import PokeballHeader from './components/PokeballHeader/PokeballHeader';
-import PokemonTypeToggleList from './components/PokemonType/PokemonTypeToggleList';
-import PokemonMove from './components/PokemonMove/PokemonMove';
-import Pokedex from './components/Pokedex/Pokedex';
+import ReactPlayer from 'react-player';
 
+// Redux
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getPokemonList, resetPokemonList} from './actions/indexActions';
-import ReactPlayer from 'react-player';
+
+// Assets
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import './App.css';
 import BGM from "./assets/music/21 Pokémon Center.mp3";
 import {BGM_VOLUME} from "./constants/MEDIA_SETTINGS";
-// import BGM from "./assets/music/08 Professor Oak's Laboratory.mp3";
+
+// Components
+import PokemonList from './components/Pokemon/PokemonList';
+import Search  from './components/Search/Search';
 
 class App extends Component {
   constructor() {
@@ -62,8 +58,11 @@ class App extends Component {
       <div className="App">
         <div>
           <div className="pokemon-list-container">
-          
-          {/* <ModalRoute path='/pokedex/:id' parentPath='/'>
+          {/* Note: Encountered Issues on React's Modal Route so a custom one was created.
+                    This comment is left here for educational/research purporses.
+                    This may improve the system or be used elsewhere.
+                    Bootstrap Modal was NOT used because bootstrap has some issues with the current React Router.
+          <ModalRoute path='/pokedex/:id' parentPath='/'>
               <PokemonDetails />
           </ModalRoute> */}
              <Search resetPokemonList={this.resetList} pokemonCount={!this.props.pokemonList ? 0 : this.props.pokemonList.length} />
